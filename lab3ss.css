@@ -1,0 +1,27 @@
+button {
+
+    background-color:azure;
+    border:none;
+    text-align:center;
+    cursor:pointer;
+    font-size:10px;
+    border-radius:4px;
+
+}
+
+input{
+    
+    margin-bottom:10px;
+    height:20px;
+}
+
+ul {
+  background: powderblue;
+  padding: 20px;
+}
+
+ul li {
+  background: mistyrose;
+  color: darkblue;
+  margin: 10px;
+}
