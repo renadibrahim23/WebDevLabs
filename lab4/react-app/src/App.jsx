@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import './style.css'
 
 const App = () => {
-  const [movies, setMovies] = useState([])      // list of movies
-  const [title, setTitle] = useState('')        // movie title input
-  const [comment, setComment] = useState('')    // comment input
-  const [rating, setRating] = useState('')      // rating input
+  const [movies, setMovies] = useState([])      
+  const [title, setTitle] = useState('')        
+  const [comment, setComment] = useState('')    
+  const [rating, setRating] = useState('')      
 
   function addMovie() {
     if (!title || !comment || !rating) return alert("Please fill all fields")
     const newMovie = { title, comment, rating }
-    setMovies([...movies, newMovie])            // add to the array
-    setTitle('')                                // clear inputs
+    setMovies([...movies, newMovie])            
+    setTitle('')                               
     setComment('')
     setRating('')
   }
