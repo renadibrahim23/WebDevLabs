@@ -1,0 +1,69 @@
+#certifications {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+#side-text {
+  flex: 1;
+  max-width: 40%;
+}
+
+#side-text h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+#side-text p {
+  font-size: 1rem;
+  color: #555;
+}
+
+#certification-cards {
+  display: flex;
+  gap: 20px;
+  flex: 2;
+  cursor:pointer;
+}
+#certification-cards .certification-card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);}
+
+.certification-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+}
+
+.certification-card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-info {
+  padding: 16px;
+}
+
+.card-info p {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.card-info h3 {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+.card-info a {
+  font-size: 1.5rem;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.card-info a:hover {
+  text-decoration: underline;
+}

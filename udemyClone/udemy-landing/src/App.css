@@ -1,0 +1,87 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #d1d7dc;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.searchbar-logo {
+  width: 100px;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.left, .links, .auth {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+#exploreBtn,
+#prices-and-plans,
+#business,
+#teach,
+#cart,
+#login,
+#signup {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+#exploreBtn:hover,
+#prices-and-plans:hover,
+#business:hover,
+#teach:hover {
+  background-color: #d2caff;
+  color:#7348ab;
+}
+
+#login {
+  border: 1px solid #6d28d2;
+  color:#6d28d2;
+}
+
+#login:hover{
+  background-color: #e9d5ff;
+  color:#6d28d2;
+}
+#signup {
+  background-color: #6d28d2;
+  color: white;
+  border: 1px solid #6d28d2;
+}
+
+#signup:hover {
+  background-color: #7433d5;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border-radius: 999px;
+  border: 1px solid #2d2f31;
+  background-color: #f7f9fa;
+  font-size: 14px;
+}
+
+#searchIcon {
+  position: absolute;
+  right: 16px;
+  font-size: 18px;
+  color: #2d2f31;
+}

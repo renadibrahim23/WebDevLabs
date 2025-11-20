@@ -1,0 +1,83 @@
+#hero-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #2a2b3f;
+  color: #fff;
+  border-radius: 16px;
+}
+
+h1, h2 {
+  font-family: "Udemy Sans", "Vazirmatn", "SF Pro Text", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#hero-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+#hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+#hero-text p {
+  font-size: 1rem;
+  margin-bottom: 24px;
+  color: #ccc;
+}
+
+#hero-text ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+#hero-text ul li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+#hero-text ul li span {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+#hero-text button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight:bold;
+}
+
+#hero-text button:hover {
+  background-color: #cfd1d3;
+}
+
+#hero-text .price {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+#hero-images {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+}
+
+#hero-images img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+li{
+  font-family: "Udemy Sans", "Vazirmatn", "SF Pro Text", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
