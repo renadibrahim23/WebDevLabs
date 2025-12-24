@@ -1,13 +1,9 @@
-// const fs = require("fs");
 
-// const data= fs.readFileSync("example.txt", "utf-8");
-// //blocking 
-// console.log(data)
 
 const express = require('express');
 
 const app = express();
-
+app.use(express.json());
 
 
 const items=[]
@@ -38,7 +34,7 @@ const data=[
     }
 ]
 
-app.get('/', (request, response)=>{   //when you receive a get request on the root path, respond with "hello world"
+app.get('/', (request, response)=>{   
     response.send("hello world")
 })
 
@@ -52,40 +48,50 @@ app.get("/posts",(req,res)=>{
     res.json(data);
 })
 
-app.post("/posts", (req, res)=>{
-    // const newPost= req.body;
+app.post("/posts", (req, res) => {
+  const newPost = {
+    id: data.length + 1,
+    title: req.body.title,
+    content: req.body.content,
+    comments: []   
+  };
 
-    const newPost ={
-        id: posts.length + 1,
-        title: req.body['title'],
-        content: req.body['content']
-    }
-    console.log(`adding this new post ${JSON.stringify(post)}`)
-    posts.push(newPost);
-    res.status(201);
-    res.end();
+  console.log(`adding this new post ${JSON.stringify(newPost)}`);
+  data.push(newPost);
 
-
-
-})
+  res.status(201).json(newPost);
+});
 
 
 
 
-app.get("/posts/:id/comments",(req,res)=>{
+app.get("/posts/:id/comments", (req, res) => {
+  const id = parseInt(req.params.id);
+  const post = data.find(p => p.id === id);
 
-    const id = parseInt(req.params.id);
-    const post = posts[id];
-    const comments=post['comments'];
-    res.json(comments);
-    
-})
+  if (!post) {
+    return res.status(404).json({ error: "Post not found" });
+  }
 
-app.post("/posts/:id/comments",(req,res)=>{
-    const id = parseInt(req.params.id);
-    const post = posts[id];
-    const comment=req.body
-    post['comments'].push(comment);
-})
+  res.json(post.comments);
+});
+
+
+app.post("/posts/:id/comments", (req, res) => {
+  const id = parseInt(req.params.id);
+  const post = data.find(p => p.id === id);
+
+  if (!post) {
+    return res.status(404).json({ error: "Post not found" });
+  }
+
+  post.comments.push({
+    id: post.comments.length + 1,
+    content: req.body.content
+  });
+
+  res.status(201).json(post.comments);
+});
+
 
 app.listen(3000);
